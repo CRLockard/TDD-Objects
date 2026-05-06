@@ -197,7 +197,11 @@ export function getTotalCost(cart) {
  * zip(["x"], ["x"]); // {x: "x"}
  */
 export function zip(keys, values) {
-  // TODO
+  let zipped = {};
+  for (let i = 0; i < keys.length; i++) {
+    zipped.key[i] = values[i];
+  }
+  return zipped;
 }
 
 /**
