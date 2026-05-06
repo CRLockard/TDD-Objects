@@ -11,7 +11,7 @@
  * getCohort({cohort: 3476, name: "Charlie"}); // 3476
  */
 export function getCohort(student) {
-  // TODO
+  return student.cohort;
 }
 
 /**
@@ -30,6 +30,11 @@ export function getCohort(student) {
  * sortStudents({cohort: 1, name: "Alice"}, {cohort: 2, name: "Alice"}); // {cohort: 1, name: "Alice"}
  */
 export function sortStudents(studentA, studentB) {
+  if (studentA.name < studentB.name) {
+    return studentA;
+  } else if (studentA.name > studentB.name) {
+    return studentB;
+  } else if (studentA.name === studentB.name) return studentA;
   // TODO
 }
 
@@ -47,7 +52,10 @@ export function sortStudents(studentA, studentB) {
  * makeFlag("yellow", "triangle"); // { color: "yellow", icon: "triangle" }
  */
 export function makeFlag(color, icon) {
-  // TODO
+  let Flag = { color: "", icon: "" };
+  Flag.color = color;
+  Flag.icon = icon;
+  return Flag;
 }
 
 /**
@@ -63,7 +71,8 @@ export function makeFlag(color, icon) {
  * increment({value: -5}); // {value: -4}
  */
 export function increment(count) {
-  // TODO
+  count.value = count.value + 1;
+  return count;
 }
 
 /**
@@ -90,7 +99,14 @@ export function increment(count) {
  *
  */
 export function getTaxicabDistance(from, to) {
-  // TODO
+  let totalDistance = 0;
+  if (from.x === to.x && from.y === to.y) {
+    return totalDistance;
+  } else {
+    totalDistance =
+      Math.abs(from.x) + Math.abs(from.y) + Math.abs(to.x) + Math.abs(to.y);
+    return totalDistance;
+  }
 }
 
 /**
