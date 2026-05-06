@@ -72,7 +72,7 @@ describe("increment", function () {
   });
 });
 
-describe.only("getTaxicabDistance", function () {
+describe("getTaxicabDistance", function () {
   it("returns the correct taxicab distance", function () {
     expect(getTaxicabDistance({ x: 0, y: 0 }, { x: 3, y: 4 })).toBe(7);
   });
@@ -113,7 +113,7 @@ describe("getHerbivores", function () {
   });
 });
 
-describe("getCarnivoreNames", function () {
+describe.only("getCarnivoreNames", function () {
   it("returns names of carnivorous animals", function () {
     expect(
       getCarnivoreNames([
@@ -142,7 +142,7 @@ describe("getCarnivoreNames", function () {
   });
 });
 
-describe("getTotalCost", function () {
+describe.only("getTotalCost", function () {
   it("returns 0 for empty cart", function () {
     expect(getTotalCost([])).toBe(0);
   });

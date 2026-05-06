@@ -122,7 +122,14 @@ export function getTaxicabDistance(from, to) {
  * getHerbivores([{name: "Rabbit", isHerbivore: true}]); // [{name: "Rabbit", isHerbivore: true}]
  */
 export function getHerbivores(animals) {
-  // TODO
+  let plantEaters = [];
+
+  for (let i = 0; i < animals.length; i++) {
+    if (animals[i].isHerbivore === true) {
+      plantEaters.push(animals[i]);
+    }
+  }
+  return plantEaters;
 }
 
 /**
@@ -138,7 +145,14 @@ export function getHerbivores(animals) {
  * getCarnivoreNames([{name: "Wolf", isCarnivore: true}]); // ["Wolf"]
  */
 export function getCarnivoreNames(animals) {
-  // TODO
+  let meatEaters = [];
+
+  for (let i = 0; i < animals.length; i++) {
+    if (animals[i].isCarnivore === true) {
+      meatEaters.push(animals[i].name);
+    }
+  }
+  return meatEaters;
 }
 
 /**
@@ -159,7 +173,11 @@ export function getCarnivoreNames(animals) {
  * getTotalCost([{name: "Notebook", quantity: 0, price: 5}]); // 0
  */
 export function getTotalCost(cart) {
-  // TODO
+  let total = 0;
+  for (let i = 0; i < cart.length; i++) {
+    total = total + cart[i].quantity * cart[i].price;
+  }
+  return total;
 }
 
 /**
