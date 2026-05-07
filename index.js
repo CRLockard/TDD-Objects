@@ -199,7 +199,7 @@ export function getTotalCost(cart) {
 export function zip(keys, values) {
   let zipped = {};
   for (let i = 0; i < keys.length; i++) {
-    zipped.key[i] = values[i];
+    zipped[keys[i]] = values[i];
   }
   return zipped;
 }
@@ -217,5 +217,23 @@ export function zip(keys, values) {
  * countCharacters("aAa"); // {a: 2, A: 1}
  */
 export function countCharacters(word) {
-  // TODO
+  // create an empty object to hold the character and count
+  let counts = {};
+
+  //loop through the string of the word
+  for (let i = 0; i < word.length; i++) {
+    let letter = word[i];
+    if (counts[letter] === undefined) {
+      counts[letter] = 1;
+    } else {
+      counts[letter] += 1;
+    }
+  }
+  //get each character
+  //is this the first time seeing this character?
+  // add the character to the new object with a value of one
+  //weve seen this character before.
+  //add 1 to the existing character
+  return counts;
+  //return the new object with the count
 }

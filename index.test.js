@@ -113,7 +113,7 @@ describe("getHerbivores", function () {
   });
 });
 
-describe.only("getCarnivoreNames", function () {
+describe("getCarnivoreNames", function () {
   it("returns names of carnivorous animals", function () {
     expect(
       getCarnivoreNames([
@@ -171,7 +171,7 @@ describe("getTotalCost", function () {
   });
 });
 
-describe.only("zip", function () {
+describe("zip", function () {
   it("zips two arrays into an object", function () {
     expect(zip(["x", "y"], [6, 7])).toEqual({ x: 6, y: 7 });
   });
